@@ -3,6 +3,7 @@ import Tiempo from "./tiempo.js"
 import Fecha from "./fecha.js"
 import Direccion from "./direccion.js"
 import Producto from "./producto.js"
+import Precio from "./precio.js"
 
 class Main{
 
@@ -12,6 +13,7 @@ class Main{
         this.fecha = new Fecha(this.fecha)
         this.direccion = new Direccion (this.direccion1)
         this.producto = new Producto (this.producto)
+        this.precio = new Precio(65.19)
     }
 
 
@@ -54,7 +56,10 @@ class Main{
         console.log(producto3.getDescripcion())
         console.log(producto4.getDescripcion())
     }
-}
+    Precio(){
+        console.log(this.precio.getPrecio())}
+    }
+
 
 let verificar = new Main()
 
@@ -63,3 +68,4 @@ verificar.Tiempo()
 verificar.Fecha()
 verificar.Direccion()
 verificar.Producto()
+verificar.Precio()
