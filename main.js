@@ -1,6 +1,7 @@
 import Cliente from "./cliente.js"
 import Tiempo from "./tiempo.js"
 import Fecha from "./fecha.js"
+import Direccion from "./direccion.js"
 
 
 class Main{
@@ -9,6 +10,7 @@ class Main{
         this.cliente1 = new Cliente("Kevin Mancilla", "Av. Pino Suarez 121", "3121105426")
         this.tiempo = new Tiempo(this.tiempo)
         this.fecha = new Fecha(this.fecha)
+        this.direccion1 = new Direccion (this.direccion1)
     }
 
 
@@ -35,7 +37,13 @@ class Main{
         console.log(fechaP.getDiaFecha())
     }
 
-    
+    Direccion(){
+        let direccion1 = new Direccion ("Av. Pino Suarez", "121", "2A", "Fatima", "28050", "Colima", "Col")
+        console.log(direccion1.getFormatoCorto())
+        console.log(direccion1.getFormatoLargo())
+
+
+    }
 }
 
 let verificar = new Main()
@@ -43,3 +51,4 @@ let verificar = new Main()
 verificar.Cliente()
 verificar.Tiempo()
 verificar.Fecha()
+verificar.Direccion()
