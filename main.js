@@ -2,7 +2,7 @@ import Cliente from "./cliente.js"
 import Tiempo from "./tiempo.js"
 import Fecha from "./fecha.js"
 import Direccion from "./direccion.js"
-
+import Producto from "./producto.js"
 
 class Main{
 
@@ -10,7 +10,8 @@ class Main{
         this.cliente1 = new Cliente("Kevin Mancilla", "Av. Pino Suarez 121", "3121105426")
         this.tiempo = new Tiempo(this.tiempo)
         this.fecha = new Fecha(this.fecha)
-        this.direccion1 = new Direccion (this.direccion1)
+        this.direccion = new Direccion (this.direccion1)
+        this.producto = new Producto (this.producto)
     }
 
 
@@ -38,11 +39,20 @@ class Main{
     }
 
     Direccion(){
-        let direccion1 = new Direccion ("Av. Pino Suarez", "121", "2A", "Fatima", "28050", "Colima", "Col")
-        console.log(direccion1.getFormatoCorto())
-        console.log(direccion1.getFormatoLargo())
+        let direccion = new Direccion ("Av. Pino Suarez", "121", "2A", "Fatima", "28050", "Colima", "Col")
+        console.log(direccion.getFormatoCorto())
+        console.log(direccion.getFormatoLargo())
+    }
 
-
+    Producto(){
+        let producto1 = new Producto ("Pizza", "$55")
+        let producto2 = new Producto ("Hamburguesa", "$45")
+        let producto3 = new Producto ("Refresco", "$15")
+        let producto4 = new Producto ("Agua", "$10")
+        console.log(producto1.getDescripcion())
+        console.log(producto2.getDescripcion())
+        console.log(producto3.getDescripcion())
+        console.log(producto4.getDescripcion())
     }
 }
 
@@ -52,3 +62,4 @@ verificar.Cliente()
 verificar.Tiempo()
 verificar.Fecha()
 verificar.Direccion()
+verificar.Producto()
