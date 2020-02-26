@@ -5,6 +5,7 @@ import Direccion from "./direccion.js"
 import Producto from "./producto.js"
 import Precio from "./precio.js"
 import Elemento from "./elemento.js"
+import Restaurante from "./restaurante.js"
 
 class Main{
 
@@ -24,6 +25,8 @@ class Main{
         this.precio = new Precio(65.19)
 
         this.elemento = new Elemento ("Hamburguesa", "2x")
+
+        this.restaurante = new Restaurante("Monolapis", 123, "Ojos, Marinos")
     }
 
 
@@ -58,6 +61,13 @@ class Main{
     Elemento(){
         console.log(this.elemento.getDescripcion())
     }
+
+    Restaurante(){
+        this.restaurante.registrarProducto(new Producto("Coctel de camaron", new Precio(121.200)))
+        this.restaurante.registrarProducto(new Producto("Pizza de cangrejo", new Precio(221.55)))
+        this.restaurante.registrarProducto(new Producto("Agua de coco", new Precio(22.32)))
+        this.restaurante.listarProductos()
+    }
     }
 
 
@@ -70,3 +80,4 @@ verificar.Direccion()
 verificar.Producto()
 verificar.Precio()
 verificar.Elemento()
+verificar.Restaurante()
