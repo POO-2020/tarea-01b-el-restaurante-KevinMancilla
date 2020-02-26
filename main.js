@@ -6,6 +6,7 @@ import Producto from "./producto.js"
 import Precio from "./precio.js"
 import Elemento from "./elemento.js"
 import Restaurante from "./restaurante.js"
+import Pedido from "./pedido.js"
 
 class Main{
 
@@ -68,6 +69,22 @@ class Main{
         this.restaurante.registrarProducto(new Producto("Agua de coco", new Precio(22.32)))
         this.restaurante.listarProductos()
     }
+
+    Pedido(){
+        let fecha = new Fecha(23, 2, 2020).getFecha();
+        let hora = new Tiempo(12, 15, "PM").getFormato12();
+        let elementos = 10;
+        let cantidad = 23;
+        let precio = 135;
+        let costo = new Precio(precio*cantidad).getPrecio();
+        let producto = new Producto("Tortas", "Hawaianas", "Chicas", costo).getDescripcion();
+        let total = new Precio(precio*cantidad*elementos).getPrecio();
+        let pedido = new Pedido(fecha, hora, elementos, cantidad, producto, total);
+        console.log(`${pedido.getResumen()}`);
+        console.log(`${pedido.getNumeroElementos()}`)
+        console.log(`${pedido.getProductos()}`)
+        console.log(`${pedido.getCostoTotal()}`)
+    }
     }
 
 
@@ -81,3 +98,4 @@ verificar.Producto()
 verificar.Precio()
 verificar.Elemento()
 verificar.Restaurante()
+verificar.Pedido()
