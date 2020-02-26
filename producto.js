@@ -5,6 +5,6 @@ export default class Producto{
     }
 
     getDescripcion(){
-        return (`${this.nombre} ${this.precio}`)
+        return (`${this.nombre} ${this.precio.valor}`)
     }
 }

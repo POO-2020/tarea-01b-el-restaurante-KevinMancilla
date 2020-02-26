@@ -20,14 +20,17 @@ class Main{
 
         this.direccion = new Direccion ("Av. Pino Suarez", "121", "2A", "Fatima", "28050", "Colima", "Col")
 
-        this.producto1 = new Producto ("Pizza", "$55")
-        this.producto2 = new Producto ("Refresco", "$15")
-
         this.precio = new Precio(65.19)
+        this.precio2 = new Precio(15)
+
+        this.producto1 = new Producto ("Pizza", this.precio)
+        this.producto2 = new Producto ("Refresco", new Precio(15))
 
         this.elemento = new Elemento ("Hamburguesa", "2x")
 
-        this.restaurante = new Restaurante("Monolapis", 123, "Ojos, Marinos")
+        this.restaurante = new Restaurante("Monolapis", 3121105426, this.direccion)
+
+        this.pedido = new Pedido(this.fecha, this.tiempo1, this.cliente1)
     }
 
 
